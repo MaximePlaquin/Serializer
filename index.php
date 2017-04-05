@@ -42,8 +42,8 @@ if ($action == 'form' && isset($_POST['from'])) {
 	<tbody>
 EOT;
 
-			foreach ($dataJson as $row) {
-				echo "<tr><td>" . $row->question . "</td><td></td></tr>";
+			foreach ($dataJson as $index => $row) {
+				echo "<tr><td>" . $row->question . "</td><td><a href='editQuestion.php?index=$index'>Editer</a></td></tr>";
 			}
 			break;
 		}
